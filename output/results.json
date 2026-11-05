@@ -1,0 +1,240 @@
+{
+  "record_count": 5,
+  "records": [
+    {
+      "id": 1,
+      "source": "Email",
+      "received_at": "2026-11-05T15:30:50.609Z",
+      "raw_message": "Hi, I tried logging in this morning and keep getting a 403 error. My account is arcvault.io/user/jsmith. This started after your update last Tuesday.",
+      "classification": {
+        "category": "Bug Report",
+        "priority": "High",
+        "confidence": 0.94,
+        "reasoning": "A single user cannot log in due to a 403 error, indicating a defect affecting a core function for that user"
+      },
+      "enrichment": {
+        "core_issue": "The customer cannot log in and receives a 403 error.",
+        "urgency": "High",
+        "urgency_reason": "keep getting a 403 error",
+        "identifiers": {
+          "account_ids": [
+            "arcvault.io/user/jsmith"
+          ],
+          "invoice_numbers": [],
+          "error_codes": [
+            "403"
+          ],
+          "other": []
+        },
+        "timeframe": "after your update last Tuesday",
+        "billing": null
+      },
+      "routing": {
+        "suggested_queue": "Engineering",
+        "final_queue": "Engineering",
+        "escalated": false,
+        "escalation_reasons": []
+      },
+      "summary": "The customer cannot log in to arcvault.io/user/jsmith and receives a 403 error, which began after the update last Tuesday. This prevents them from accessing their account. Investigate the login failure and the recent update to determine the cause and resolve the 403 error.",
+      "metadata": {
+        "model": "openai/gpt-oss-120b",
+        "prompt_version": "1.2",
+        "workflow_version": "1.0",
+        "summary_source": "llm",
+        "llm_errors": {
+          "classify": null,
+          "enrich": null,
+          "summarize": null
+        },
+        "processed_at": "2026-11-05T15:30:52.614Z"
+      }
+    },
+    {
+      "id": 2,
+      "source": "Web Form",
+      "received_at": "2026-11-05T15:31:03.671Z",
+      "raw_message": "We'd love to see a bulk export feature for our audit logs. We're a compliance-heavy org and this would save us hours every month.",
+      "classification": {
+        "category": "Feature Request",
+        "priority": "Low",
+        "confidence": 0.96,
+        "reasoning": "The customer is asking for a new bulk export capability, which is a request for a feature that does not currently exist."
+      },
+      "enrichment": {
+        "core_issue": "The customer requests a bulk export feature for their audit logs.",
+        "urgency": "Low",
+        "urgency_reason": "no deadline, just a suggestion",
+        "identifiers": {
+          "account_ids": [],
+          "invoice_numbers": [],
+          "error_codes": [],
+          "other": []
+        },
+        "timeframe": null,
+        "billing": null
+      },
+      "routing": {
+        "suggested_queue": "Product",
+        "final_queue": "Product",
+        "escalated": false,
+        "escalation_reasons": []
+      },
+      "summary": "The customer requests a bulk export feature for their audit logs to help their compliance-heavy organization save time each month. No specific deadline or impact is mentioned. Assess the demand and fit for the product roadmap, then communicate the outcome to the customer.",
+      "metadata": {
+        "model": "openai/gpt-oss-120b",
+        "prompt_version": "1.2",
+        "workflow_version": "1.0",
+        "summary_source": "llm",
+        "llm_errors": {
+          "classify": null,
+          "enrich": null,
+          "summarize": null
+        },
+        "processed_at": "2026-11-05T15:31:05.831Z"
+      }
+    },
+    {
+      "id": 3,
+      "source": "Support Portal",
+      "received_at": "2026-11-05T15:31:16.304Z",
+      "raw_message": "Invoice #8821 shows a charge of $1,240 but our contract rate is $980/month. Can someone look into this?",
+      "classification": {
+        "category": "Billing Issue",
+        "priority": "Medium",
+        "confidence": 0.95,
+        "reasoning": "The customer is disputing a charge on an invoice, which is a billing issue."
+      },
+      "enrichment": {
+        "core_issue": "The customer disputes invoice #8821, which charged $1,240 against a contract rate of $980/month.",
+        "urgency": "Medium",
+        "urgency_reason": "disputed charge",
+        "identifiers": {
+          "account_ids": [],
+          "invoice_numbers": [
+            "8821"
+          ],
+          "error_codes": [],
+          "other": []
+        },
+        "timeframe": null,
+        "billing": {
+          "charged_amount": 1240,
+          "expected_amount": 980,
+          "discrepancy": 260,
+          "amounts_verified": true
+        }
+      },
+      "routing": {
+        "suggested_queue": "Billing",
+        "final_queue": "Billing",
+        "escalated": false,
+        "escalation_reasons": []
+      },
+      "summary": "The customer reports that invoice #8821 was charged $1,240 instead of the contracted $980 per month, a $260 discrepancy. They are requesting a review of this charge. Billing should investigate the invoice, verify the contract terms, and correct or explain the difference to the customer.",
+      "metadata": {
+        "model": "openai/gpt-oss-120b",
+        "prompt_version": "1.2",
+        "workflow_version": "1.0",
+        "summary_source": "llm",
+        "llm_errors": {
+          "classify": null,
+          "enrich": null,
+          "summarize": null
+        },
+        "processed_at": "2026-11-05T15:31:19.002Z"
+      }
+    },
+    {
+      "id": 4,
+      "source": "Email",
+      "received_at": "2026-11-05T15:31:28.931Z",
+      "raw_message": "I'm not sure if this is the right place to ask, but is there a way to set up SSO with Okta? We're evaluating switching our auth provider.",
+      "classification": {
+        "category": "Technical Question",
+        "priority": "Low",
+        "confidence": 0.96,
+        "reasoning": "The user asks if SSO with Okta can be set up, which is a how‑to/support question without reporting a defect."
+      },
+      "enrichment": {
+        "core_issue": "The customer asks whether SSO can be set up with Okta.",
+        "urgency": "Low",
+        "urgency_reason": "evaluating switching our auth provider",
+        "identifiers": {
+          "account_ids": [],
+          "invoice_numbers": [],
+          "error_codes": [],
+          "other": [
+            "Okta"
+          ]
+        },
+        "timeframe": null,
+        "billing": null
+      },
+      "routing": {
+        "suggested_queue": "IT/Security",
+        "final_queue": "IT/Security",
+        "escalated": false,
+        "escalation_reasons": []
+      },
+      "summary": "The customer wants to know if SSO can be set up with Okta as they evaluate switching their authentication provider. This is a low‑urgency technical question with no immediate impact. The IT/Security team should respond with information on configuring Okta SSO and any relevant requirements.",
+      "metadata": {
+        "model": "openai/gpt-oss-120b",
+        "prompt_version": "1.2",
+        "workflow_version": "1.0",
+        "summary_source": "llm",
+        "llm_errors": {
+          "classify": null,
+          "enrich": null,
+          "summarize": null
+        },
+        "processed_at": "2026-11-05T15:31:30.035Z"
+      }
+    },
+    {
+      "id": 5,
+      "source": "Web Form",
+      "received_at": "2026-11-05T15:31:40.363Z",
+      "raw_message": "Your dashboard stopped loading for us around 2pm EST. Checked our end — it's definitely on yours. Multiple users affected.",
+      "classification": {
+        "category": "Incident/Outage",
+        "priority": "High",
+        "confidence": 0.96,
+        "reasoning": "Multiple users report the dashboard not loading, indicating a service-wide problem, which fits Incident/Outage and is high priority as a core function is unavailable."
+      },
+      "enrichment": {
+        "core_issue": "The customer's dashboard stopped loading and multiple users are affected.",
+        "urgency": "High",
+        "urgency_reason": "dashboard stopped loading, multiple users affected",
+        "identifiers": {
+          "account_ids": [],
+          "invoice_numbers": [],
+          "error_codes": [],
+          "other": []
+        },
+        "timeframe": "around 2pm EST",
+        "billing": null
+      },
+      "routing": {
+        "suggested_queue": "Engineering",
+        "final_queue": "Human Escalation",
+        "escalated": true,
+        "escalation_reasons": [
+          "incident_category"
+        ]
+      },
+      "summary": "The customer reports that their dashboard stopped loading around 2 pm EST and multiple users are affected. This appears to be a service-wide incident impacting the dashboard. Investigate the outage, coordinate with Engineering as the likely owner, and update the customer on status.",
+      "metadata": {
+        "model": "openai/gpt-oss-120b",
+        "prompt_version": "1.2",
+        "workflow_version": "1.0",
+        "summary_source": "llm",
+        "llm_errors": {
+          "classify": null,
+          "enrich": null,
+          "summarize": null
+        },
+        "processed_at": "2026-11-05T15:31:41.896Z"
+      }
+    }
+  ]
+}

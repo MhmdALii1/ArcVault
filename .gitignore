@@ -1,0 +1,20 @@
+# Secrets
+.env
+.env.*
+
+# Local n8n data
+.n8n/
+
+# Not part of the submission
+*.docx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editors and OS
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
