@@ -4,7 +4,7 @@
     {
       "id": 1,
       "source": "Email",
-      "received_at": "2026-11-05T15:30:50.609Z",
+      "received_at": "2026-11-05T21:11:26.133Z",
       "raw_message": "Hi, I tried logging in this morning and keep getting a 403 error. My account is arcvault.io/user/jsmith. This started after your update last Tuesday.",
       "classification": {
         "category": "Bug Report",
@@ -26,7 +26,7 @@
           ],
           "other": []
         },
-        "timeframe": "after your update last Tuesday",
+        "timeframe": "this morning",
         "billing": null
       },
       "routing": {
@@ -35,7 +35,7 @@
         "escalated": false,
         "escalation_reasons": []
       },
-      "summary": "The customer cannot log in to arcvault.io/user/jsmith and receives a 403 error, which began after the update last Tuesday. This prevents them from accessing their account. Investigate the login failure and the recent update to determine the cause and resolve the 403 error.",
+      "summary": "The customer reports a 403 error when trying to log in to arcvault.io/user/jsmith, which began this morning after the update last Tuesday. This prevents access to their account. Engineering should investigate the login failure and determine if the recent update caused the error, then respond to the customer with findings and a fix timeline.",
       "metadata": {
         "model": "openai/gpt-oss-120b",
         "prompt_version": "1.2",
@@ -46,13 +46,13 @@
           "enrich": null,
           "summarize": null
         },
-        "processed_at": "2026-11-05T15:30:52.614Z"
+        "processed_at": "2026-11-05T21:11:28.383Z"
       }
     },
     {
       "id": 2,
       "source": "Web Form",
-      "received_at": "2026-11-05T15:31:03.671Z",
+      "received_at": "2026-11-05T21:11:40.091Z",
       "raw_message": "We'd love to see a bulk export feature for our audit logs. We're a compliance-heavy org and this would save us hours every month.",
       "classification": {
         "category": "Feature Request",
@@ -90,13 +90,13 @@
           "enrich": null,
           "summarize": null
         },
-        "processed_at": "2026-11-05T15:31:05.831Z"
+        "processed_at": "2026-11-05T21:11:41.638Z"
       }
     },
     {
       "id": 3,
       "source": "Support Portal",
-      "received_at": "2026-11-05T15:31:16.304Z",
+      "received_at": "2026-11-05T21:11:53.131Z",
       "raw_message": "Invoice #8821 shows a charge of $1,240 but our contract rate is $980/month. Can someone look into this?",
       "classification": {
         "category": "Billing Issue",
@@ -130,7 +130,7 @@
         "escalated": false,
         "escalation_reasons": []
       },
-      "summary": "The customer reports that invoice #8821 was charged $1,240 instead of the contracted $980 per month, a $260 discrepancy. They are requesting a review of this charge. Billing should investigate the invoice, verify the contract terms, and correct or explain the difference to the customer.",
+      "summary": "The customer reports that invoice #8821 shows a charge of $1,240, which is $260 higher than the contract rate of $980 per month. They are requesting a review of this discrepancy. Billing should investigate the invoice, correct any error, and inform the customer of the resolution.",
       "metadata": {
         "model": "openai/gpt-oss-120b",
         "prompt_version": "1.2",
@@ -141,19 +141,19 @@
           "enrich": null,
           "summarize": null
         },
-        "processed_at": "2026-11-05T15:31:19.002Z"
+        "processed_at": "2026-11-05T21:11:55.365Z"
       }
     },
     {
       "id": 4,
       "source": "Email",
-      "received_at": "2026-11-05T15:31:28.931Z",
+      "received_at": "2026-11-05T21:12:06.853Z",
       "raw_message": "I'm not sure if this is the right place to ask, but is there a way to set up SSO with Okta? We're evaluating switching our auth provider.",
       "classification": {
         "category": "Technical Question",
         "priority": "Low",
         "confidence": 0.96,
-        "reasoning": "The user asks if SSO with Okta can be set up, which is a how‑to/support question without reporting a defect."
+        "reasoning": "The user asks if SSO with Okta can be set up, which is a how‑to/configuration question with no defect reported."
       },
       "enrichment": {
         "core_issue": "The customer asks whether SSO can be set up with Okta.",
@@ -176,7 +176,7 @@
         "escalated": false,
         "escalation_reasons": []
       },
-      "summary": "The customer wants to know if SSO can be set up with Okta as they evaluate switching their authentication provider. This is a low‑urgency technical question with no immediate impact. The IT/Security team should respond with information on configuring Okta SSO and any relevant requirements.",
+      "summary": "The customer wants to know if SSO can be set up with Okta as they evaluate switching their authentication provider. This is a low‑urgency technical question with no immediate deadline. The IT/Security team should respond with information on configuring Okta SSO for ArcVault.",
       "metadata": {
         "model": "openai/gpt-oss-120b",
         "prompt_version": "1.2",
@@ -187,24 +187,24 @@
           "enrich": null,
           "summarize": null
         },
-        "processed_at": "2026-11-05T15:31:30.035Z"
+        "processed_at": "2026-11-05T21:12:08.564Z"
       }
     },
     {
       "id": 5,
       "source": "Web Form",
-      "received_at": "2026-11-05T15:31:40.363Z",
+      "received_at": "2026-11-05T21:12:19.400Z",
       "raw_message": "Your dashboard stopped loading for us around 2pm EST. Checked our end — it's definitely on yours. Multiple users affected.",
       "classification": {
         "category": "Incident/Outage",
         "priority": "High",
         "confidence": 0.96,
-        "reasoning": "Multiple users report the dashboard not loading, indicating a service-wide problem, which fits Incident/Outage and is high priority as a core function is unavailable."
+        "reasoning": "Multiple users report the dashboard not loading, indicating a service-wide problem affecting core functionality."
       },
       "enrichment": {
         "core_issue": "The customer's dashboard stopped loading and multiple users are affected.",
         "urgency": "High",
-        "urgency_reason": "dashboard stopped loading, multiple users affected",
+        "urgency_reason": "stopped loading around 2pm EST, multiple users affected",
         "identifiers": {
           "account_ids": [],
           "invoice_numbers": [],
@@ -222,7 +222,7 @@
           "incident_category"
         ]
       },
-      "summary": "The customer reports that their dashboard stopped loading around 2 pm EST and multiple users are affected. This appears to be a service-wide incident impacting the dashboard. Investigate the outage, coordinate with Engineering as the likely owner, and update the customer on status.",
+      "summary": "The customer reports that their dashboard stopped loading around 2 pm EST, affecting multiple users. This appears to be a potential service-wide incident. Investigate the outage, determine scope, and coordinate resolution, involving Engineering as needed.",
       "metadata": {
         "model": "openai/gpt-oss-120b",
         "prompt_version": "1.2",
@@ -233,7 +233,7 @@
           "enrich": null,
           "summarize": null
         },
-        "processed_at": "2026-11-05T15:31:41.896Z"
+        "processed_at": "2026-11-05T21:12:21.557Z"
       }
     }
   ]

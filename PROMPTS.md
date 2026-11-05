@@ -150,4 +150,6 @@ I built this with Claude Code as an AI assistant, as the brief expects. These ar
 | A misleading check | The AI read all five tabs as present, but Google returns the first tab for unknown names | Tested with a made-up tab name, then listed the real tabs |
 | Hidden errors | Failures first showed only as "unknown error", which hid the real cause | Logged errors with credentials stripped, which revealed `ERR_INVALID_HTTP_TOKEN` from an invalid credential header name |
 
+The timeframe fix helped but isn't fully stable: a later run put "this morning" in `timeframe`, while the summary still kept the link to the update. A labeled evaluation set would catch this kind of drift.
+
 The main lesson is that my pass/fail checks passed while several of these problems were present. Only reading the records as the receiving team would exposed them.
